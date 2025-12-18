@@ -39,6 +39,15 @@ if status is-interactive
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
     end
+    if not test -e ~/.config/fish/functions/yeet.fish
+        alias --save yeet="yay -Runs"
+    end
+    if not test -e ~/.config/fish/functions/yays.fish
+	alias --save yays="yay -S"
+    end
+    if not test -e ~/.config/fish/functions/yayq.fish
+	alias --save yayq="yay -Q | grep"
+    end
 end
 
 fish_add_path /home/owenm/.spicetify
