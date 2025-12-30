@@ -48,6 +48,9 @@ if status is-interactive
     if not test -e ~/.config/fish/functions/yayq.fish
 	alias --save yayq="yay -Q | grep"
     end
+    function grepstring
+	grep -rnw $argv[1] -e $argv[2]
+    end
 end
 
 fish_add_path /home/owenm/.spicetify
