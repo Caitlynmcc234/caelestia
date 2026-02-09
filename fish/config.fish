@@ -52,5 +52,3 @@ if status is-interactive
 	grep -rnw $argv[1] -e $argv[2]
     end
 end
-
-fish_add_path /home/owenm/.spicetify
